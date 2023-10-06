@@ -20,7 +20,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 
-	o = abs(n % 10);
+	o = n % 10;
 
 	if (o > 5)
 	{
