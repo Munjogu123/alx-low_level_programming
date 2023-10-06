@@ -6,7 +6,7 @@
 /**
  *main - Entry point
  *
- *last_num - gets the last digit of a number
+ *int o - gets the last digit of a number
  *if - checks the last digit of a number
  *
  *Return: always return 0 (Success)
@@ -18,21 +18,21 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int last_num;
+	int o;
 
-	last_num = abs(n % 10);
+	o = abs(n % 10);
 
-	if (last_num > 5)
+	if (o > 5)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, last_num);
+		printf("Last digit of %d is %d and is greater than 5\n", n, o);
 	}
-	else if (last_num == 0)
+	else if (o == 0)
 	{
-		printf("Last digit of %d is %d and is 0\n", n, last_num);
+		printf("Last digit of %d is %d and is 0\n", n, o);
 	}
-	else if (last_num < 6 && last_num != 0)
+	else if (o < 6 && o != 0)
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_num);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, o);
 	}
 	return (0);
 }
