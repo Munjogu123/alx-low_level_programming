@@ -14,11 +14,11 @@
 int main(void)
 {
 	int n;
+	int o;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int o;
 
 	o = abs(n % 10);
 
