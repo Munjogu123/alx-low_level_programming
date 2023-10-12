@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 /**
- * fizzBuzz - prints 1 to 100 recognizing multiples of 3 and 5
+ * main - prints 1 to 100 recognizing multiples of 3 and 5
+ *
+ * Return: returns value 0 (success)
  */
 
-void fizzBuzz(void)
+int main(void)
 {
 	int i;
 
@@ -19,7 +21,7 @@ void fizzBuzz(void)
 		} else if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("FizzBuzz");
-		}else
+		} else
 		{
 		printf("%d", i);
 		}
@@ -27,4 +29,5 @@ void fizzBuzz(void)
 		printf(" ");
 	}
 	printf("\n");
+	return (0);
 }
