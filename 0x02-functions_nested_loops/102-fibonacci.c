@@ -2,7 +2,7 @@
 
 /**
  * main - prints fibonacci series
- * Return - return 0 (success)
+ * Return: return 0 (success)
  */
 int main(void)
 {
