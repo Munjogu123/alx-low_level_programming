@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int a, b, i, n, sum;
+	long int a, b, i, n, sum;
 
 	a = 1;
 	b = 2;
@@ -14,7 +14,10 @@ int main(void)
 
 	for (i = 1; i <= n; i++)
 	{
-		printf("%d, ", a);
+		if (i < n)
+			printf("%ld, ", a);
+		else
+			printf("%ld", a);
 		sum = a + b;
 		a = b;
 		b = sum;
