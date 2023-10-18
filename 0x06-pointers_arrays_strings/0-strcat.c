@@ -21,18 +21,22 @@ int _strlen(char *s)
 
 /**
  * *_strcat - concatenates two strings
-* @dest: first string
+ * @dest: first string
  * @src: second string
+ *
+ * Return: returns the concatenated string
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, j;
+	int i, len1, len2;
 
-	j = _strlen(src);
+	len1 = _strlen(dest);
+	len2 = _strlen(src);
 
-	for (i = 0; dest[i] != '\0'; i++)
+	for (i = 0; i <= len2; i++)
 	{
-		src[i + j] = dest[i];
+		dest[len1 + i] = src[i];
 	}
-	src[i + j] = '\0';
+	return (dest);
+
 }
