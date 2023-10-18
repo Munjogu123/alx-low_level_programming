@@ -37,6 +37,6 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest[len1 + i] = src[i];
 	}
-	dest [len1 + i] = '\0';
+	dest[len1 + i] = '\0';
 	return (dest);
 }
