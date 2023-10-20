@@ -12,17 +12,16 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+		{
+				s[i] = s[i] - 32;
+		} else if (s[i - 1] == ' ' || s[i - 1] == '.' || s[i -1] == '\n' || s[i - 1] == '\t')
 		{
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - 32;
-		} else if (s[i - 1] == ' ')
+		} else if (s[i] == '\t')
 		{
-			if (s[i] >= 'a' && s[i] <= 'z')
-				s[i] = s[i] - 32;
-		} else
-		{
-			s[i] = s[i];
+			s[i] = ' ';
 		}
 	}
 	return (s);
