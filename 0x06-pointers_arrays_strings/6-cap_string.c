@@ -2,7 +2,7 @@
 
 /**
  * *cap_string - capitalizes all words of a string
- * @str: string to be converted
+ * @s: string to be converted
  *
  * Return: returns converted string
  */
@@ -14,8 +14,12 @@ char *cap_string(char *s)
 	{
 		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
 		{
+			s[i] = s[i] - 32;
+		} else if (s[i - 1] == ' ' || s[i - 1] == '.')
+		{
+			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - 32;
-		} else if (s[i - 1] == ' ' || s[i - 1] == '.' || s[i -1] == '\n' || s[i - 1] == '\t')
+		} else if (s[i - 1] == '\n' || s[i - 1] == '\t')
 		{
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = s[i] - 32;
