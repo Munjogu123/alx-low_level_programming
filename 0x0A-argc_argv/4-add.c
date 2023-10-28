@@ -2,15 +2,16 @@
 #include <stdlib.h>
 
 /**
- * main - adds positive numbers
- * @argc: arguments
- * @argv: array of arguments
- *
- * Return: return 0 if succcess. Otherwise return 1
- */
+* main - adds positive numbers
+* @argc: number of arguments
+* @argv: array of arguments
+*
+* Return: 0 on success. Otherwise 1
+*/
+
 int main(int argc, char *argv[])
 {
-	int i, j, sum;
+	int i, j, sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -22,9 +23,10 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		sum = 0;
+
 		sum += atoi(argv[i]);
 	}
+
 	printf("%d\n", sum);
 
 	return (0);
