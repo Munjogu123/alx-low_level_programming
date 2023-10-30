@@ -36,11 +36,11 @@ char *_strdup(char *str)
 		return (NULL);
 
 	replace = (char *)malloc(sizeof(char) * (_strlen(str) + 1));
-	for (i = 0; str[i] != '\0'; i++)
-		replace[i] = str[i];
-
 	if (replace == NULL)
 		return (NULL);
+
+	for (i = 0; str[i] != '\0'; i++)
+		replace[i] = str[i];
 
 	return (replace);
 }
