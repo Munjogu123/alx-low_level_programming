@@ -42,6 +42,5 @@ char *_strdup(char *str)
 	if (replace == NULL)
 		return (NULL);
 
-	*(replace + i) = '\0';
 	return (replace);
 }
