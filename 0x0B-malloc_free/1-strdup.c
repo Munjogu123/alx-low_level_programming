@@ -38,6 +38,9 @@ char *_strdup(char *str)
 	replace = (char *)malloc(sizeof(char) * (_strlen(str) + 1));
 	for (i = 0; str[i] != '\0'; i++)
 		replace[i] = str[i];
+	
+	if (replace == 0)
+		return (0);
 
 	*(replace + i) = '\0';
 	return (replace);
