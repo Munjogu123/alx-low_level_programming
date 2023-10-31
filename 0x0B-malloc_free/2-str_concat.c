@@ -39,30 +39,11 @@ char *str_concat(char *s1, char *s2)
 	if (concat == NULL)
 		return (NULL);
 
-	i = 0;
-	j = 0;
-	if (s1)
-	{
-		if (s1 == NULL)
-			s1 = "";
-		while (i < len1)
-		{
-			*(concat + i) = s1[i];
-			i++;
-		}
-	}
+	for (i = 0; i < len1; i++)
+		concat[i] = s1[i];
+	for (j = 0; j < len2; j++, i++)
+		concat[i] = s2[j];
 
-	if (s2)
-	{
-		if (s2 == NULL)
-			s2 = "";
-		while (i < (len1 + len2))
-		{
-			*(concat + i) = s2[j];
-			i++;
-			j++;
-		}
-	}
-	concat[i] = '\0';
+	concat[len1 + len2] = '\0';
 	return (concat);
 }
