@@ -7,9 +7,9 @@
  *
  * Return: returns length of the string
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int length;
+	unsigned int length;
 
 	length = 0;
 
@@ -31,7 +31,7 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int i, j, k, lens2;
+	unsigned int i, j, lens2;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -55,7 +55,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (i < _strlen(s1))
 			concat[i] = s1[i];
 		else
-			concat[i] = s2[i - (strlen(s1)];
+			concat[i] = s2[i - (_strlen(s1))];
 	}
 
 	concat[i] = '\0';
