@@ -38,23 +38,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
+	if (num < 0)
+		return (NULL);
+
+	if (n >= _strlen(s2))
+		n = _strlen(s2);
+
 	len = (_strlen(s1) + n + 1);
 
 	concat = (char *) malloc(len * sizeof(char));
 
-	if (concat == 0)
-	{
+	if (concat == NULL)
 		return (NULL);
-	}
 
 	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(concat + i) = *(s1 + i);
+		concat[i] = s1[i];
 
 	for (j = 0; j <= n; j++)
-	{
-		*(concat + i) = *(s2 + j);
-		i++;
-	}
+		concat[i + j] = s2[j];
+	concat[i + j] = '\0';
 
 	return (concat);
 }
