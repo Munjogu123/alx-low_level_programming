@@ -1,9 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-#include "main.h"
-#include <stdlib.h>
-
 /**
  * _strlen - function that returns the length of a string
  * @s: string to be tested for its length
