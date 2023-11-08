@@ -1,5 +1,5 @@
 #ifndef _CALC_
-#define _CAL_
+#define _CALC_
 /**
  * struct op - Struct op
  *
