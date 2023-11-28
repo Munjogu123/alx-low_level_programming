@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	check_args(argc);
 
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
 	file_error(file_from, file_to, argv);
 
 	r = 1024;
