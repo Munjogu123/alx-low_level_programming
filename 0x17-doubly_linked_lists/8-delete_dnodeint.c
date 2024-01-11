@@ -5,7 +5,7 @@
  * @head: pointer to head node
  * @index: specified position
  *
- * Return: 1 if it succeeds otherwise 0
+ * Return: 1 if it succeeds otherwise -1
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -13,7 +13,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *prev, *current, *next;
 
 	if ((*head) == NULL)
-		return (0);
+		return (-1);
 
 	if (index == 0)
 	{
@@ -45,7 +45,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			next->prev = prev;
 			free(current);
 		}
-		return (0);
+		return (-1);
 	}
 	return (1);
 }
