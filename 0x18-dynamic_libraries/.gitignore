@@ -17,3 +17,4 @@ _abs.c
 _isupper.c
 isalpha.c
 islower.c
+len
