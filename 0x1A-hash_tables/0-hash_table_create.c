@@ -21,10 +21,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	if (new)
-	{
-		free(new->array);
-		free(new);
-	}
 	return (new);
 }
