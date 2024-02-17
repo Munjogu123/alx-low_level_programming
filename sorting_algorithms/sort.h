@@ -27,5 +27,7 @@ void quick_sort(int *array, size_t size);
 void swap(int *a, int *b);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+int partition(int *array, int start, int end, size_t size);
+void quicksort_recursion(int *array, int start, int end, size_t size);
 
 #endif
